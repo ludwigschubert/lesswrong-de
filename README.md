@@ -1,20 +1,16 @@
-# Proteus - Middleman
+# LessWrong Deutschland e.V.
 
-## About Proteus
+[![Build Status](https://travis-ci.org/ludwigschubert/lesswrong-de.svg)](https://travis-ci.org/ludwigschubert/lesswrong-de)
+[![Code Climate](https://codeclimate.com/github/ludwigschubert/lesswrong-de/badges/gpa.svg)](https://codeclimate.com/github/ludwigschubert/lesswrong-de)
+[![Test Coverage](https://codeclimate.com/github/ludwigschubert/lesswrong-de/badges/coverage.svg)](https://codeclimate.com/github/ludwigschubert/lesswrong-de/coverage)
 
-[Proteus](http://github.com/thoughtbot/proteus) is a collection of useful
-starter kits to help you prototype faster. It follows the
-[thoughtbot styleguide](https://github.com/thoughtbot/guides) and includes our
-favorite front end tools.
+## About lesswrong-de
 
-## About Middleman
+[lesswrong-de](http://github.com/ludwigschubert/lesswrong-de) is a website for Lesswrong Deutschland e.V.
 
-Middleman is a static site generator built in Ruby. This makes it a great fit
-for projects that may end up as a Ruby on Rails app. Its minimalistic structure
-makes it very easy to work with, and includes support for deploying to Github
-Pages.
+It's built on [Proteus](https://github.com/thoughtbot/proteus), a collection of starter kits to help build static websites.
 
-## Includes
+## Included Frameworks and Tools
 
 * [HAML](http://haml.info):
   Simple template markup
@@ -30,19 +26,13 @@ Pages.
   Scaffold styles, variables and structure for Bourbon projects.
 * [Middleman Live Reload](https://github.com/middleman/middleman-livereload):
   Reloads the page when files change
-* [Middleman Deploy](https://github.com/karlfreeman/middleman-deploy):
-  Deploy your Middleman build via rsync, ftp, sftp, or git (deploys to Github Pages by default)
-
-We also recommend [Refills](http://refills.bourbon.io/) for prepackaged interface patterns.
 
 ## Getting Started
 
 Set up your project in your code directory
 ```
-git clone git@github.com:thoughtbot/proteus-middleman.git your-project-folder
-cd your-project-folder
-git remote rm origin
-git remote add origin your-git-url
+git clone git@github.com:ludwigschubert/lesswrong-de.git lesswrong-de
+cd lesswrong-de
 ```
 
 Install dependencies:
@@ -55,12 +45,12 @@ Run the server
 middleman
 ```
 
-Deploy to Github Pages
+Deploy to lesswrong.de
 ```
-middleman deploy
+git push origin
 ```
+…then watch the build process at [Travis.ci](https://travis-ci.org/ludwigschubert/lesswrong-de).
 
-Or install the [Proteus gem](https://github.com/thoughtbot/proteus) and enjoy some shortcuts.
 
 ## Directories
 
@@ -70,17 +60,18 @@ Vendor stylesheets and JavaScripts should go in each of their `/vendor/` directo
 ## Contributing
 
 If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/proteus-middleman/issues).
+[GitHub Issue](https://github.com/ludwigschubert/lesswrong-de/issues).
 
-Have a fix or want to add a feature?
-[Pull Requests](https://github.com/thoughtbot/proteus-middleman/pulls) are welcome!
+If there's sufficient demand, I can set up a staging site for pull requests. Let me know!
 
 ## Credits
 
 [![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
 
-Proteus Middleman is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Thank you to all of [the contributors](https://github.com/thoughtbot/proteus-middleman/contributors)!
+Proteus Middleman is maintained and funded by x[thoughtbot, inc](http://thoughtbot.com). Thank you to all of [the contributors](https://github.com/thoughtbot/proteus-middleman/contributors)!
 
 ## License
 
-Copyright © 2014–2015 [thoughtbot, inc](http://thoughtbot.com). Proteus Middleman is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2015 [Lesswrong Deutschland e.V.](http://lesswrong.de).
+
+Starter Kit Copyright © 2014–2015 [thoughtbot, inc](http://thoughtbot.com). Proteus Middleman is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
