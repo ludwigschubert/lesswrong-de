@@ -8,6 +8,9 @@ if [ "$(gem query -i -n bundler)" = "false" ]; then
   gem install bundler
 fi
 
+# Set up binary dependencies
+brew install aspell
+
 # Set up Ruby dependencies via Bundler
 echo "Installing Dependencies..."
 bundle install
@@ -21,3 +24,7 @@ if [ "$(git config --get remote.origin.url)" = "git@github.com:thoughtbot/proteu
     git remote add origin "$url"
   fi
 fi
+
+# Further instructions
+echo "Now you can run `middleman` from shell to get a local live-reloading server."
+echo "To deploy, simply open a PR; CI will build & deploy on merge to master."

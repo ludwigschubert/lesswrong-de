@@ -17,6 +17,11 @@ end
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
+  activate :spellcheck, 
+    ignored_exts: [".xml", ".png", ".jpg", ".ico", ".svg"],
+    allow: [
+      "Meetup",
+    ]
 end
 
 helpers do
