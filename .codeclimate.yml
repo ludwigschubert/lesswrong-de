@@ -1,0 +1,20 @@
+engines:
+  rubocop:
+    enabled: true
+  golint:
+    enabled: true
+  gofmt:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+ratings:
+   paths:
+   - source/**
+exclude_paths:
+- source/assets/fonts/**/*
+- source/assets/images/**/*
+- source/assets/javascripts/smooth_scroll.js
+- source/assets/javascripts/svg_fallback.js.coffee
+- source/assets/stylesheets/vendor/**/*
