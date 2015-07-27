@@ -1,0 +1,101 @@
+.tools {
+  @include clearfix;
+  padding-bottom: 3em;
+  position: relative;
+  margin-bottom: -3em;
+
+  li {
+    color: $light-gray;
+    font-size: em(13);
+    float: left;
+    text-align: center;
+    width: 16.66%;
+
+    .icon {
+      position: relative;
+
+      &::before, &::after {
+        @include position(absolute, 50% null null 0);
+        @include size(1.25em 2em);
+        background: $dark-gray;
+        border-radius: 0 2em 2em 0;
+        content: "";
+        display: block;
+        margin-top: -1em;
+        z-index: 1;
+      }
+
+      &::after {
+        @include size(1.5em);
+        border-radius: 2em;
+        left: auto;
+        margin-top: -0.75em;
+        right: -0.95em;
+        z-index: 2;
+      }
+    }
+
+    &:first-child .icon::before,
+    &:last-child .icon::after {
+      display: none;
+    }
+
+    &.tool-haml .icon::after {
+      background-color: #F4F4F0;
+    }
+
+    &.tool-coffeescript .icon::after {
+      background-color: #AD4A35;
+    }
+
+    &.tool-sass .icon::after {
+      background-color: #C6538C;
+    }
+
+    &.tool-bourbon .icon::after {
+      background-color: #F47A33;
+    }
+
+    &.tool-neat .icon::after {
+      background-color: #FDF6E3;
+    }
+
+    img {
+      margin: 0 2% 0.5em;
+      width: 96%;
+    }
+
+    &:first-child img {
+      border-radius: $base-border-radius 0 0 $base-border-radius;
+    }
+
+    &:last-child img {
+      border-radius: 0 $base-border-radius $base-border-radius 0;
+    }
+
+    h3 {
+      font-size: 1.25em;
+
+      @include media($small-screen) {
+        font-size: 0.8em;
+      }
+    }
+
+    p {
+      @include position(absolute, null 0 0 0);
+      color: $light-gray;
+      display: none;
+      padding-top: 1em;
+    }
+
+    &:hover {
+      h3 {
+        color: $base-link-color;
+      }
+
+      p {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+@import "bourbon";
+
+@include keyframes(orbit) {
+  $steps: 20;
+
+  @for $step from 0 through $steps {
+    $factor: $step/$steps;
+    $percent: $factor * 100%;
+    $degrees: $factor * 360deg;
+    $edge: 75px;
+    $peaks: 4;
+    $wobble: sin($degrees * 5) * 5;
+    $offset: $wobble + $edge;
+
+    #{$percent} {
+      @include transform(rotate($degrees) translateX($offset));
+    }
+  }
+}
+
+#logo {
+  $fillcolor: #AD4838;
+  $blobs: 120;
+  $duration: 120s;
+
+  #nucleus {
+    fill: $fillcolor;
+    position: relative;
+  }
+
+  #particles {
+    circle {
+      @include animation(orbit $duration linear infinite);
+      @include transform-origin(160px 160px);
+      fill: $fillcolor;
+      fill-opacity: 0.3;
+
+      @for $blob from 0 through $blobs {
+        $percent: $blob/$blobs;
+        $delay: $duration * $percent * -1;
+
+        &:nth-child(#{$blob}) {
+          @include animation-delay($delay);
+          @include animation-duration($duration * 0.9);
+        }
+      }
+
+      &:nth-child(even) {
+        @include animation-direction(reverse);
+        @include animation-duration($duration * 0.5);
+      }
+
+      &:nth-child(odd) {
+        @include animation-duration($duration * 1.6);
+      }
+
+      &:nth-child(3) {
+        @include animation-duration($duration * 0.6);
+      }
+
+      &:nth-child(5) {
+        @include animation-duration($duration * 6.6);
+      }
+    }
+  }
+}

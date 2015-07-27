@@ -1,11 +1,122 @@
----
-title: Page Title
----
-
-.delete-me
+.hero
   .container
-    %h1 Proteus
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+    = image_tag "logo.svg", data: {svg_fallback: "/assets/images/logo.png"}
+    %h1 The Berlin Rationalist Community
+    %p Heute besser als gestern; morgen besser als heute.
+
+.container
+  %section#start.section-kits
+    .section-title
+      %h3 The kits (so far)
+
+    %ul.kits
+      %li
+        = link_to "http://github.com/thoughtbot/proteus-middleman" do
+          = image_tag "middleman.svg", data: {svg_fallback: "/assets/images/middleman.png"}
+          %h3 Middleman
+        %p Tiny static site generator written in Ruby
+      %li
+        = link_to "http://github.com/thoughtbot/proteus-jekyll" do
+          = image_tag "jekyll.svg", data: {svg_fallback: "/assets/images/jekyll.png"}
+          %h3 Jekyll
+        %p Ruby site generator with tons of plugins
+      %li
+        = link_to "http://github.com/thoughtbot/proteus-gulp" do
+          = image_tag "gulp.svg", data: {svg_fallback: "/assets/images/gulp.png"}
+          %h3 Gulp
+        %p Dead simple generator built on Node and Gulp
+
+    = link_to "View the kits on Github", "https://github.com/thoughtbot/proteus", class: "button"
+
+  %section
+    .section-title
+      %h3 What's included?
+    %p.intro Proteus is a collection of useful starter kits to help you launch your static site or prototype faster. They follow the #{link_to "thoughtbot styleguide", "https://github.com/thoughtbot/guides/tree/master/style"} and include our favorite front end tools:
+
+    %ul.tools
+      %li.tool-haml
+        = link_to "http://haml.info" do
+          .icon
+            = image_tag "haml.svg", data: {svg_fallback: "/assets/images/haml.png"}
+          .info
+            %h3 HAML
+            %p Simple template markup
+      %li.tool-coffeescript
+        = link_to "http://coffeescript.org" do
+          .icon
+            = image_tag "coffeescript.svg", data: {svg_fallback: "/assets/images/coffeescript.png"}
+          .info
+            %h3 Coffeescript
+            %p Beats writing javascript
+      %li.tool-sass
+        = link_to "http://sass-lang.com" do
+          .icon
+            = image_tag "sass.svg", data: {svg_fallback: "/assets/images/sass.png"}
+          .info
+            %h3 Sass
+            %p CSS with superpowers
+      %li.tool-bourbon
+        = link_to "http://bourbon.io" do
+          .icon
+            = image_tag "bourbon.svg", data: {svg_fallback: "/assets/images/bourbon.png"}
+          .info
+            %h3 Bourbon
+            %p Sass mixin library
+      %li.tool-neat
+        = link_to "http://neat.bourbon.io" do
+          .icon
+            = image_tag "neat.svg", data: {svg_fallback: "/assets/images/neat.png"}
+          .info
+            %h3 Neat
+            %p Semantic grid
+      %li.tool-bitters
+        = link_to "http://bitters.bourbon.io" do
+          .icon
+            = image_tag "bitters.svg", data: {svg_fallback: "/assets/images/bitters.png"}
+          .info
+            %h3 Bitters
+            %p Styles, variables and structure
+
+  %section.section-gem
+    .section-title
+      = image_tag "gem.svg", data: {svg_fallback: "/assets/images/gem.png"}
+      %h3 A gem to make it even easier
+
+    %p Just run this to install it:
+
+    %pre
+      %code gem install proteus-kits
+
+    %p Then pick the project you want to start (i.e. Middleman)
+
+    %pre
+      %code proteus new middleman your-project-name
+
+    %p We've also included some handy shortcuts for you to use in your kit:
+    %ul
+      %li
+        %code proteus setup
+        \: Installs dependencies
+      %li
+        %code proteus server
+        \: Runs the server
+      %li
+        %code proteus deploy
+        \: Deploys your site to Github Pages
+
+  %section.section-faq
+    .section-title
+      %h3 Questions
+    %dl
+      %dt What's up with the name?
+      %dd Proteus was an early Greek sea god and a shapeshifter. The English word "protean" means "able to do many things, change easily, versatile". We use static site generators to <em>prot</em>otype apps and sites quickly, so it seemed like a good fit.
+
+      %dt I found a bug / Have an improvement / Want to help
+      %dd
+        Great! The best way to make the kits better is to open an Issue on that kit on Github. Bonus points if you submit a Pull Request to fix a problem. Ask <a href="http://twitter.com/joshuaogle">@joshuaogle</a> if you have any questions on where to get started.
+
+      %dt My favorite generator isn't listed!
+      %dd
+        We'll be adding more as we find ourselves using more of them. Can't wait? Put together a template that includes the tools listed above and
+        = link_to "open a pull request", "https://github.com/thoughtbot/proteus/pulls"
+        adding it to the list.

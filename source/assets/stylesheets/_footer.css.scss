@@ -1,0 +1,22 @@
+.footer {
+  background: #eee;
+  color: $dark-gray;
+  margin-top: 5em;
+  padding: 2em;
+  text-align: center;
+
+  a {
+    color: $red;
+
+    &:hover {
+      color: tint($red, 25%);
+    }
+  }
+}
+
+.logo {
+  @include hide-text();
+  @include size(50px);
+  background: image-url("thoughtbot.svg") no-repeat;
+  margin: 0 auto 0.5em;
+}
