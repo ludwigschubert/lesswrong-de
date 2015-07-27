@@ -19,11 +19,6 @@ configure :build do
   activate :relative_assets
 end
 
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :git
-end
-
 helpers do
   def nav_link(link_text, page_url, options = {})
     options[:class] ||= ""
