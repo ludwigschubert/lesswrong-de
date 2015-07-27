@@ -7,6 +7,7 @@ deploy:
     secure: VhniyVFAOu2iyGMbevn+ACE6ljhQnt17cflfiwbPnGUb+swRGzv7ZWxcTAXLnIO9k23WKZMl5FEsMlQEctAWbO/PUe6L7B7K/e5XRyRNCx1dAVcCXu6GMVQ+rMBFF+MQ2tJhAxJrOLi/Rmv/eCuz0dTwSquf6RpbZlIEGr7G9iltMN13ahStEiZe9DinqN33FNGuGvssDBvdIsKnuYcqao6oztQcOWV51RSC6RVTarBsd+b72CjOXBysA8yPc78oKDXOrpE0LQfjMX3k4X8x3PfBQOk94OMcKNxdtQcOkSq5wQmwJXRdki2KT3H4C9AF4Joodeg29Ymhb0+02aWoPFCGwXpKffUD4dnetqYgYL0lSeY4y0YM5IM/y7o2kdIvqkW/ZStdIgJaSItA4cQsyJyI2NyMSgAkzZTb1K+caDsdIaveLDEhm3Umzz+93tzw6TAm35SRgOdNvcW2sWYF1zEP9tc/zQxH0mZ4yhdnDv5ZnGVayp7qbwtR187pF/lPtEV6Q5+fxY8AAI2OPyHYZMJG7AT7Lyrd6iDnM1Iqx0PNUhHdLkumrbZ3nM892Rur24T2LZrz6/numuDZZK6H+v3KKCyqEWA2TfhMm+W+sH7VSfbrna0Y8qBtKu2xO/lBpncGcQchvNkRe0EiQevTBHZtPLcWaYZqoGuQoEC/6qQ=
   bucket: lesswrong.de
   region: eu-central-1
+  endpoint: lesswrong.de.s3-website.eu-central-1.amazonaws.com
   skip_cleanup: true
   local-dir: build
   acl: public_read
