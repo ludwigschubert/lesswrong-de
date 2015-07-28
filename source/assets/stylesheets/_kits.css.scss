@@ -1,3 +1,7 @@
+.section-intro {
+  text-align: center;
+}
+
 .section-kits {
   text-align: center;
 }
@@ -6,12 +10,17 @@
   @include clearfix;
 
   li {
-    @include omega(3n);
-    @include span-columns(4);
+    @include omega(2n);
+    @include span-columns(6);
+    @include pad(0px 15px 0px 15px);
     color: $light-gray;
     font-size: em(13);
     margin-bottom: 2em;
     text-align: center;
+
+    p {
+      text-align: justify;
+    }
 
     img {
       @include transition(transform, 0.1s);
@@ -24,7 +33,7 @@
     }
 
     h3 {
-      margin-bottom: 0.25em;
+      margin-bottom: 0.5em;
     }
   }
 }
