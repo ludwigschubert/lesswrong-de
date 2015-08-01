@@ -23,13 +23,8 @@
     }
 
     img {
-      @include transition(transform, 0.1s);
       border-radius: 50%;
       margin-bottom: 1em;
-    }
-
-    &:hover img {
-      @include transform(scale(1.1));
     }
 
     h3 {
