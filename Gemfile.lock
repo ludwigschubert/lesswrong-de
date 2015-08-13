@@ -137,6 +137,7 @@ DEPENDENCIES
   bourbon
   middleman
   middleman-livereload
+  middleman-spellcheck
   neat
 
 BUNDLED WITH
