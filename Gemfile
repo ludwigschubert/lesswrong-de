@@ -6,4 +6,4 @@ gem "middleman"
 gem "middleman-livereload"
 gem "bourbon"
 gem "neat"
-gem "middleman-spellcheck"
+gem "middleman-spellcheck", github: 'minivan/middleman-spellcheck', branch: 'master'
