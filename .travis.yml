@@ -14,3 +14,4 @@ deploy:
   acl: public_read
   on:
     repo: ludwigschubert/lesswrong-de
+    branch: website

@@ -1,6 +1,6 @@
 # LessWrong Deutschland e.V.
 
-[![Build Status](https://travis-ci.org/ludwigschubert/lesswrong-de.svg)](https://travis-ci.org/ludwigschubert/lesswrong-de)
+[![Build Status](https://travis-ci.org/ludwigschubert/lesswrong-de.svg?branch=master)](https://travis-ci.org/ludwigschubert/lesswrong-de)
 [![Code Climate](https://codeclimate.com/github/ludwigschubert/lesswrong-de/badges/gpa.svg)](https://codeclimate.com/github/ludwigschubert/lesswrong-de)
 [![Dependency Status](https://gemnasium.com/ludwigschubert/lesswrong-de.svg)](https://gemnasium.com/ludwigschubert/lesswrong-de)
 [![Test Coverage](https://codeclimate.com/github/ludwigschubert/lesswrong-de/badges/coverage.svg)](https://codeclimate.com/github/ludwigschubert/lesswrong-de/coverage)

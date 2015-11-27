@@ -51,3 +51,9 @@
     }
   }
 }
+
+.smallhero {
+  @extend .hero;
+  height: 15vh;
+  min-height: 6em;
+}
