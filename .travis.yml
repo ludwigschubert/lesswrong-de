@@ -1,6 +1,12 @@
 language: ruby
 cache: bundler
 script: bundle exec middleman build
+addons:
+  apt:
+    packages:
+      - aspell
+      - aspell-en
+      - aspell-de
 deploy:
   provider: s3
   access_key_id: AKIAJDLHMMLPIA6FFHUQ

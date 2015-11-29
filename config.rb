@@ -9,19 +9,20 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
+set :spellcheck_allow_file, 'data/spellcheck_allow_file.txt'
+
+# Spellchecking language can be overwritten in source file, e.g. see impressum
+activate :spellcheck,
+  lang: 'en',
+  ignored_exts: [".xml", ".png", ".jpg", ".ico", ".svg", ".txt"]
 
 configure :development do
- activate :livereload
+  activate :livereload
 end
 
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
-  # activate :spellcheck,
-  #   ignored_exts: [".xml", ".png", ".jpg", ".ico", ".svg"],
-  #   allow: [
-  #     "Meetup",
-  #   ]
 end
 
 helpers do
